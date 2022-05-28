@@ -1,4 +1,4 @@
-# HappyHouse_final_서울_12반_진상우_신성은
+# HappyHouse_final
 
 1. 5월 19일(목) 진행사항
     기본 틀 마련, member, apt관련 내용 정리, 프로젝트 레이아웃 세팅, 개발 환경 세팅
@@ -16,4 +16,4 @@
     follow 기능 추가, jwt사용에 따른 일부 controller 수정, follow를 위한 memberlist, membersearch추가
 
 6. 5월 26일(목) 진행사항
-
+    follow 수정, 발표 준비
