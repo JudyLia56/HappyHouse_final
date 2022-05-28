@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.mapper.NoticeBoardMapper">
+	
+	<select id="listNotice" resultType="NoticeBoardDto">
+		select no, title, writer, content, regtime,views
+		  from notice_board 
+		 order by no desc
+	</select>
+	
+	<select id="detailNotice" resultType="NoticeBoardDto">
+		select no, title, writer, content, regtime,views
+		  from notice_board 
+		 where no = #{no}
+	</select>
+
+	<insert id="writeNotice" parameterType="NoticeBoardDto">
+		insert into notice_board(
+			title, writer, content, regtime
+		) values (
+			#{title}, #{writer}, #{content}, now()
+		)
+	</insert>
+	
+	<update id="updateNotice" parameterType="NoticeBoardDto">
+		update notice_board 
+		   set title = #{title}, 
+		   	   writer = #{writer}, 
+		   	   content = #{content}
+		 where no = #{no}
+	</update>
+	
+	<update id="countViews" parameterType="int">
+		update notice_board 
+		   set views = views +1
+		 where no = #{no}
+	</update>
+
+	<delete id="deleteNotice" parameterType="int">
+		delete 
+		  from notice_board 
+		 where no = #{no}
+	</delete>
+
+</mapper>

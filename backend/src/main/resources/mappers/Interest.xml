@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.mapper.InterestMapper">
+	<select id="InterestList" parameterType="string" resultType="HouseInfoDto">
+		select aptCode, dongName, aptName, buildYear, jibun, lat, lng 
+		from interest I, houseinfo h where I.houseinfo_no = h.aptCode and userid = #{userid}
+	</select>
+	
+	<insert id="registInterest" parameterType="InterestDto">
+		insert into interest (userid, houseinfo_no) 
+		values ( #{userid}, #{houseinfo_no} )
+	</insert>
+	
+	<delete id="deleteInterest" parameterType="InterestDto">
+		delete from interest
+		where userid = #{userid}
+		and houseinfo_no = #{houseinfo_no}
+	</delete>
+</mapper>
