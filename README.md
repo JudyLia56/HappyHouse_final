@@ -16,4 +16,4 @@
     follow 기능 추가, jwt사용에 따른 일부 controller 수정, follow를 위한 memberlist, membersearch추가
 
 6. 5월 26일(목) 진행사항
-    follow 수정, 발표 준비
+    follow 수정, 발표 자료 준비
