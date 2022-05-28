@@ -18,5 +18,5 @@
 6. 5월 26일(목) 진행사항
     follow 수정, 발표 자료 준비
 
-팀장: https://github.com/xxxjinjordan
-팀원: https://github.com/JudyLia56
+팀장(프론트엔드): https://github.com/xxxjinjordan
+팀원(백엔드)(ME): https://github.com/JudyLia56
